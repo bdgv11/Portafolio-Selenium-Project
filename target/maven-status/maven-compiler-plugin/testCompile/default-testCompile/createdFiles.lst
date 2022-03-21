@@ -1,0 +1,5 @@
+Tests/RegisterPageTests.class
+Tests/HeaderPageTests.class
+Tests/HomePageTests.class
+Tests/BaseClass.class
+Tests/PageObjectHandler.class
