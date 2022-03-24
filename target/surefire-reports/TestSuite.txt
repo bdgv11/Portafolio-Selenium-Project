@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 24.12 s <<< FAILURE! - in TestSuite
+verifyEuroCurrencyIsDisplayed(Tests.HeaderPageTests)  Time elapsed: 0.769 s  <<< FAILURE!
+java.lang.AssertionError: Currency is not updated to ??? Currency expected [??? Currency ] but found [? Currency ]
+	at Tests.HeaderPageTests.verifyEuroCurrencyIsDisplayed(HeaderPageTests.java:37)
+
+verifyPoundsCurrencyIsDisplayed(Tests.HeaderPageTests)  Time elapsed: 0.013 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'Bryans-MacBook-Pro.local', ip: 'fe80:0:0:0:1cb6:72da:17ed:c073%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.2.1', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {using=xpath, value=//div[@class='pull-left']/form/div/button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.83, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /var/folders/r1/d39krdpx5sx...}, goog:chromeOptions: {debuggerAddress: localhost:52027}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 99.0.4844.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+	at Tests.HeaderPageTests.verifyPoundsCurrencyIsDisplayed(HeaderPageTests.java:48)
+
+verifyUSDollarCurrencyIsDisplayed(Tests.HeaderPageTests)  Time elapsed: 0.004 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'Bryans-MacBook-Pro.local', ip: 'fe80:0:0:0:1cb6:72da:17ed:c073%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.2.1', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {using=xpath, value=//div[@class='pull-left']/form/div/button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.83, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /var/folders/r1/d39krdpx5sx...}, goog:chromeOptions: {debuggerAddress: localhost:52027}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 99.0.4844.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+	at Tests.HeaderPageTests.verifyUSDollarCurrencyIsDisplayed(HeaderPageTests.java:26)
+
+test_error_messages_displayed(Tests.RegisterPageTests)  Time elapsed: 0.003 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'Bryans-MacBook-Pro.local', ip: 'fe80:0:0:0:1cb6:72da:17ed:c073%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.2.1', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {using=css selector, value=div[class='alert alert-danger alert-dismissible']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.83, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: /var/folders/r1/d39krdpx5sx...}, goog:chromeOptions: {debuggerAddress: localhost:52100}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52100/devtoo..., se:cdpVersion: 99.0.4844.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+	at Tests.RegisterPageTests.test_error_messages_displayed(RegisterPageTests.java:42)
+

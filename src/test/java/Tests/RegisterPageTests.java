@@ -36,8 +36,16 @@ public class RegisterPageTests extends BaseClass{
     }
 
     @Test
-    public void test_error_messages_displayed() {headerPage().clickRegisterLink();
+    public void test_error_messages_displayed() {
+
+        Assert.assertTrue(headerPage().verifyLoadsHeaderPage(),"Header page is not displayed ");
+
+        headerPage().clickRegisterLink();
+
+        Assert.assertTrue(registerPage().verifyRegisterPageLoad(),"Register page is not displayed ");
+
         registerPage().clickContinueButton();
+
         Assert.assertTrue(registerPage().verifyErrorMsgs(),"Error messages doesn't appear!!! ");
     }
 }

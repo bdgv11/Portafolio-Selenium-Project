@@ -19,7 +19,7 @@ public class HeaderPageTests extends BaseClass{
 
         String currencyToBeDisplayed = "$ Currency ";
 
-        //Assert.assertTrue(headerPage().verifyLoadsHeaderPage(),"Header page is not displayed ");
+        Assert.assertTrue(headerPage().verifyLoadsHeaderPage(),"Header page is not displayed ");
         headerPage().changeCurrencyToDollar();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -32,7 +32,7 @@ public class HeaderPageTests extends BaseClass{
 
         String currencyToBeDisplayed = "€ Currency ";
 
-        //Assert.assertTrue(headerPage().verifyLoadsHeaderPage(),"Header page is not displayed ");
+        Assert.assertTrue(headerPage().verifyLoadsHeaderPage(),"Header page is not displayed ");
         headerPage().changeCurrencyToEuro();
         Assert.assertEquals(headerPage().getActualCurrency(),currencyToBeDisplayed,"Currency is not updated to € Currency");
 
@@ -43,7 +43,7 @@ public class HeaderPageTests extends BaseClass{
         
         String currencyToBeDisplayed = "£ Currency ";
 
-        //Assert.assertTrue(headerPage().verifyLoadsHeaderPage(),"Header page is not displayed ");
+        Assert.assertTrue(headerPage().verifyLoadsHeaderPage(),"Header page is not displayed ");
         headerPage().changeCurrencyToPound();
         Assert.assertEquals(headerPage().getActualCurrency(),currencyToBeDisplayed,"Currency is not updated to £ Currency");
 

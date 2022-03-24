@@ -22,14 +22,9 @@ public class UtilitiesPage {
         action = new Actions(driver);
     }
 
-    public boolean hoverOnElement(WebElement element) {
-        try {
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    public void hoverOnElement(WebElement element) {
+        if(waitForElementToBeClickeable(element)){
             action.moveToElement(element).click().perform();
-            return true;
-        } catch (Exception e) {
-            System.err.println("Hover on element failed.");
-            return false;
         }
     }
 

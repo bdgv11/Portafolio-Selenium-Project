@@ -1,5 +1,6 @@
 package PageObjects;
 
+import io.netty.handler.codec.http.websocketx.PongWebSocketFrame;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,11 +35,7 @@ public class HeaderPage extends UtilitiesPage{
                 waitForElementToBeVisible(contactUsLink) && waitForElementToBeVisible(yourStoreMainTitle);
     }
 
-    public void backToHomepage(){
-        clickOnElement(yourStoreMainTitle);
-    }
-
-    public void changeCurrencyToEuro() {
+    public void changeCurrencyToEuro() { 
         hoverOnElement(currencyDropDown);
         clickOnElement(euroCurrencyButton);
     }
@@ -56,23 +53,6 @@ public class HeaderPage extends UtilitiesPage{
     public void clickRegisterLink() {
         hoverOnElement(myAccountDropDown);
         clickOnElement(registerLink);
-    }
-
-    public void clickLoginLink(){
-        hoverOnElement(loginLink);
-        clickOnElement(loginLink);
-    }
-
-    public void typeOnSearchButton(String text){
-        typeOnElement(searchField, text);
-    }
-
-    public void clickOnSearchButton(){
-        clickOnElement(searchButton);
-    }
-
-    public void clickOnCartButton(){
-        clickOnElement(cartButton);
     }
 
     public String getActualCurrency(){
