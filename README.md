@@ -6,7 +6,9 @@ This is a repo for a Selenium + Java project in order to show my skills with tes
 * [Built with](#built-with)
 * [Getting started](#getting-started)
     - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
+* [Tests](#tests)
+
+
 
 ## About the project
 This project is about the automation of a web page: http://opencart.abstracta.us/ using Selenium and Java.
@@ -26,4 +28,15 @@ Download java and JDK links:
 - JDK: https://www.oracle.com/java/technologies/downloads/#jdk17-mac-
 - Java: https://www.java.com/en/download/
 
-## Installation
+## Tests
+Home Page:
+- Verify that Home Page is displayed correctly
+
+Header Page:
+- Verify that check if currency dropdown is displayed and once changed to select currency, dropdown title is updated with the symbol of the selected currency
+- Verify that check if currency dropdown is displayed and once changed to select currency, dropdown title is updated with the symbol of the selected currency
+- Verify that check if currency dropdown is displayed and once changed to select currency, dropdown title is updated with the symbol of the selected currency
+
+Register Page:
+- Verify that create a new user is completed successfully
+- Verify that error message is displayed when user click on continue button without filling all fields

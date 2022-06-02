@@ -7,7 +7,8 @@ import org.testng.annotations.Test;
 
 public class RegisterPageTests extends BaseClass{
 
-    @Test
+    
+    @Test(description = "Verify that create a new user is completed successfully")
     public void test_create_new_account(){
 
         headerPage().clickRegisterLink();
@@ -35,7 +36,7 @@ public class RegisterPageTests extends BaseClass{
         System.out.println("Email: " + email + " password: " + password);
     }
 
-    @Test
+    @Test(description = "Verify that error message is displayed when user click on continue button without filling all fields")
     public void test_error_messages_displayed() {
 
         Assert.assertTrue(headerPage().verifyLoadsHeaderPage(),"Header page is not displayed ");

@@ -1,6 +1,5 @@
 package PageObjects;
 
-import io.netty.handler.codec.http.websocketx.PongWebSocketFrame;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -58,5 +57,13 @@ public class HeaderPage extends UtilitiesPage{
     public String getActualCurrency(){
         WebElement el = driver.findElement(By.xpath("//div[@class='pull-left']/form/div/button"));
         return el.getText();
+    }
+
+    public void typeOnSearch(String text){
+        typeOnElement(searchField, text);
+    }
+
+    public void clickOnSearchButton(){
+        clickOnElement(searchButton);
     }
 }

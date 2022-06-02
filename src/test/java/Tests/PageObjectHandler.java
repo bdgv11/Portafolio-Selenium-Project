@@ -14,6 +14,7 @@ public class PageObjectHandler {
     private HomePage homePage;
     private HeaderPage headerPage;
     private RegisterPage registerPage;
+    private SearchPage searchPage;
 
     public PageObjectHandler( ) {
     }
@@ -38,5 +39,12 @@ public class PageObjectHandler {
             registerPage = new RegisterPage(driver);
         }
         return this.registerPage;
+    }
+
+    public SearchPage searchPage(){
+        if(this.searchPage == null){
+            searchPage = new SearchPage(driver);
+        }
+        return this.searchPage;
     }
 }
