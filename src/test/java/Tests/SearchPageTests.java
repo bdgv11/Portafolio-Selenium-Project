@@ -47,21 +47,25 @@ public class SearchPageTests extends BaseClass {
 
     }
 
-    // TODO complete this assert
     @Test(description = "Verify that if you try to click 'Add to Wish List' without log in an error msg is showed")
     public void test_wishList_error_msg() {
 
         // Search one product
-        String prod = "Macbook";
-        String errorMsgExpected = "You must login or create an account to save";
+        String prod = "Air";
 
         headerPage().typeOnSearch(prod);
         headerPage().clickOnSearchButton();
 
-        // Click on every product wish list button
+        // Click on product wish list button
         searchPage().clickWishListButton();
 
-        // Assert
+        String firstProductName = searchPage().getFirstProductName(prod);
 
+        String expectedErrorMsg = "you must login or create an account to save " + firstProductName.toLowerCase()
+                + " to your wish list!";
+
+        // Assert
+        Assert.assertTrue((searchPage().getLoginMsg().toLowerCase().contains(expectedErrorMsg)),
+                "There are some diff.");
     }
 }

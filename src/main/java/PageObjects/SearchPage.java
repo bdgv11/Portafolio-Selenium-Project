@@ -103,9 +103,24 @@ public class SearchPage extends UtilitiesPage {
 
     public void clickWishListButton() {
 
-        for (int i = 0; i < listOfProductsWishListButton.size(); i++) {
-            listOfProductsWishListButton.get(i).click();
+        int count = 0;
+
+        while (count < 1) {
+            listOfProductsWishListButton.get(count).click();
+            count++;
         }
+
+    }
+
+    public String getFirstProductName(String prod) {
+        String text = "";
+        int count = 0;
+
+        while (count < 1) {
+            text = (titleOfEachProduct.get(count).getAttribute("text"));
+            count++;
+        }
+        return text;
     }
 
 }

@@ -16,7 +16,8 @@ public class PageObjectHandler {
     private RegisterPage registerPage;
     private SearchPage searchPage;
 
-    public PageObjectHandler( ) {
+    public PageObjectHandler() {
+
     }
 
 
