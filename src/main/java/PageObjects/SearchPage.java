@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class SearchPage extends UtilitiesPage {
 
     // Web Elements
@@ -18,40 +20,92 @@ public class SearchPage extends UtilitiesPage {
     WebElement sortByDropdown = driver.findElement(By.id("input-sort"));
     WebElement showQuantityByDropdown = driver.findElement(By.id("input-limit"));
     WebElement searchTitle = driver.findElement(By.cssSelector("#content > h1"));
-        
-    // Methods
-    public SearchPage(WebDriver driver){
-        super(driver);
-    }    
 
-    public boolean verifyLoads(){
-        return waitForElementToBeVisible(searchField) && waitForElementToBeVisible(searchButton) && waitForElementToBeVisible(searchTitle)
-                && waitForElementToBeVisible(sortByDropdown) && waitForElementToBeVisible(showQuantityByDropdown);
+    // List of web elements
+    List<WebElement> titleOfEachProduct = driver.findElements(By.cssSelector(
+            "[class='caption'] > h4 > a"));
+    List<WebElement> priceOfEachProduct = driver.findElements(By.cssSelector(
+            "[class='caption'] p.price"));
+    List<WebElement> listOfProductsWishListButton = driver.findElements(By.cssSelector(
+            "button[data-original-title='Add to Wish List']"));
+
+    // Methods
+    public SearchPage(WebDriver driver) {
+        super(driver);
     }
 
-    public void typeOnSearchField(String text){
+    public boolean verifyLoads() {
+        return waitForElementToBeVisible(searchField) && waitForElementToBeVisible(searchButton)
+                && waitForElementToBeVisible(searchTitle);
+    }
+
+    public void typeOnSearchField(String text) {
         typeOnElement(searchField, text);
     }
 
-    public void clickOnSearchButton(){
+    public void clickOnSearchButton() {
         clickOnElement(searchButton);
     }
 
-    public void clickOnSearchSUbCategories(){
+    public void clickOnSearchSUbCategories() {
         clickOnElement(subCategoryCheckbox);
     }
 
-    public void clickOnSearchProdDescription(){
+    public void clickOnSearchProdDescription() {
         clickOnElement(searchProductDescCheckbox);
     }
 
-    public void changeSortDropdown(String text){
+    public void changeSortDropdown(String text) {
         Select drop = new Select(sortByDropdown);
         drop.selectByVisibleText(text);
         searchButton.sendKeys(Keys.RETURN);
     }
 
-    public String getTitleSearchText(){
+    public String getTitleSearchText() {
         return searchTitle.getText();
     }
+
+    public String getLoginMsg() {
+        WebElement alertLogInMsg = driver
+                .findElement(By.cssSelector("div[class='alert alert-success alert-dismissible'"));
+        return alertLogInMsg.getText();
+    }
+
+    // This method was created to validate if the DESC is present in every product
+    // showed when you search it
+    public boolean getProductDescription(String desc) {
+
+        boolean flag = true;
+
+        for (int i = 0; i < titleOfEachProduct.size(); i++) {
+
+            String textValueOfEach = (titleOfEachProduct.get(i).getAttribute("text"));
+            String mainString = textValueOfEach.toLowerCase();
+
+            flag = mainString.contains(desc.toLowerCase());
+        }
+        return flag;
+    }
+
+    public boolean getProductPrice(String desc) {
+
+        boolean flag = true;
+
+        for (int i = 0; i < priceOfEachProduct.size(); i++) {
+
+            String textValueOfEach = (priceOfEachProduct.get(i).getText());
+            if (textValueOfEach != "") {
+                flag = true;
+            }
+        }
+        return flag;
+    }
+
+    public void clickWishListButton() {
+
+        for (int i = 0; i < listOfProductsWishListButton.size(); i++) {
+            listOfProductsWishListButton.get(i).click();
+        }
+    }
+
 }
