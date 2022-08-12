@@ -3,16 +3,14 @@ package Tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+public class RegisterPageTests extends BaseClass {
 
-
-public class RegisterPageTests extends BaseClass{
-
-    
     @Test(description = "Verify that create a new user is completed successfully")
-    public void test_create_new_account(){
+    public void test_create_new_account() {
 
         headerPage().clickRegisterLink();
 
+        // Creating a new account.
         String firstName = "Eddy";
         String lastName = "Fizzio";
         String email = registerPage().getRandomEmail(10);
@@ -21,6 +19,7 @@ public class RegisterPageTests extends BaseClass{
 
         String titleAccountCreated = "Your Account Has Been Created!";
 
+        // Filling out the form.
         registerPage().typeOnFirstName(firstName);
         registerPage().typeOnLastName(lastName);
         registerPage().typeOnEmail(email);
@@ -31,7 +30,10 @@ public class RegisterPageTests extends BaseClass{
         registerPage().clickOnPrivacyPolicy();
         registerPage().clickContinueButton();
 
-        Assert.assertTrue(registerPage().getTextAccountCreated(titleAccountCreated),"Account title created doesn't match! ");
+        // Verifying that the text "Your Account Has Been Created!" is displayed on the
+        // page.
+        Assert.assertTrue(registerPage().getTextAccountCreated(titleAccountCreated),
+                "Account title created doesn't match! ");
 
         System.out.println("Email: " + email + " password: " + password);
     }
@@ -39,14 +41,17 @@ public class RegisterPageTests extends BaseClass{
     @Test(description = "Verify that error message is displayed when user click on continue button without filling all fields")
     public void test_error_messages_displayed() {
 
-        Assert.assertTrue(headerPage().verifyLoadsHeaderPage(),"Header page is not displayed ");
+        // The above code is verifying the error messages when the user clicks on the
+        // continue button without
+        // entering any details.
+        Assert.assertTrue(headerPage().verifyLoadsHeaderPage(), "Header page is not displayed ");
 
         headerPage().clickRegisterLink();
 
-        Assert.assertTrue(registerPage().verifyRegisterPageLoad(),"Register page is not displayed ");
+        Assert.assertTrue(registerPage().verifyRegisterPageLoad(), "Register page is not displayed ");
 
         registerPage().clickContinueButton();
 
-        Assert.assertTrue(registerPage().verifyErrorMsgs(),"Error messages doesn't appear!!! ");
+        Assert.assertTrue(registerPage().verifyErrorMsgs(), "Error messages doesn't appear!!! ");
     }
 }

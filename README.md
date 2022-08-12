@@ -42,9 +42,9 @@ Home Page:
 
 Header Page:
 
-- Verify that check if currency dropdown is displayed and once changed to select currency, dropdown title is updated with the symbol of the selected currency
-- Verify that check if currency dropdown is displayed and once changed to select currency, dropdown title is updated with the symbol of the selected currency
-- Verify that check if currency dropdown is displayed and once changed to select currency, dropdown title is updated with the symbol of the selected currency
+- Verify that check if currency dropdown is displayed and once changed to $ currency , dropdown title is updated with the symbol of the selected currency
+- Verify that check if currency dropdown is displayed and once changed to € currency , dropdown title is updated with the symbol of the selected currency
+- Verify that check if currency dropdown is displayed and once changed to £ currency , dropdown title is updated with the symbol of the selected currency
 
 Register Page:
 

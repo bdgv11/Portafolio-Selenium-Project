@@ -4,7 +4,8 @@ import PageObjects.*;
 import org.openqa.selenium.WebDriver;
 
 /**
- * This class will be used to manage all the instances of page objects to avoid create them in every test page
+ * This class will be used to manage all the instances of page objects to avoid
+ * create them in every test page
  */
 
 public class PageObjectHandler {
@@ -16,34 +17,35 @@ public class PageObjectHandler {
     private RegisterPage registerPage;
     private SearchPage searchPage;
 
+    // A constructor.
     public PageObjectHandler() {
 
     }
 
-
+    // Creating a new instance of the page object if it is null.
     public HomePage homePage() {
-        if(this.homePage == null) {
+        if (this.homePage == null) {
             homePage = new HomePage(driver);
         }
         return this.homePage;
     }
 
-    public HeaderPage headerPage(){
-        if(this.headerPage == null){
+    public HeaderPage headerPage() {
+        if (this.headerPage == null) {
             headerPage = new HeaderPage(driver);
         }
         return this.headerPage;
     }
 
-    public RegisterPage registerPage(){
-        if(this.registerPage == null){
+    public RegisterPage registerPage() {
+        if (this.registerPage == null) {
             registerPage = new RegisterPage(driver);
         }
         return this.registerPage;
     }
 
-    public SearchPage searchPage(){
-        if(this.searchPage == null){
+    public SearchPage searchPage() {
+        if (this.searchPage == null) {
             searchPage = new SearchPage(driver);
         }
         return this.searchPage;
