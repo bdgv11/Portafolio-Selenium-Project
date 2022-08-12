@@ -36,9 +36,11 @@ Download java and JDK links:
 
 ## Tests
 
+```
 Home Page:
 
 - Verify that Home Page is displayed correctly
+- Verify that when you open the home page the products are displayed, at least 1
 
 Header Page:
 
@@ -57,3 +59,5 @@ Search Page:
 - Verify that search page title is showed
 - Verify that each price is showed for all the products
 - Verify that if you try to click 'Add to Wish List' without log in an error msg is showed
+
+```

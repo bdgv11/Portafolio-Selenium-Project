@@ -18,4 +18,12 @@ public class HomePageTests extends BaseClass {
         Assert.assertTrue(headerPage().verifyLoadsHeaderPage(), "Header page elements are not displayed correctly. ");
         Assert.assertTrue(homePage().verifyLoadsHomePage());
     }
+
+    @Test(description = "Verify that when you open the home page the products are displayed, at least 1")
+    public void atLeastOneProductDisplayed() {
+
+        Assert.assertTrue(headerPage().verifyLoadsHeaderPage(), "Header page elements are not displayed correctly. ");
+        Assert.assertTrue(homePage().verifyLoadsHomePage(), "Home Page title is not displayed. ");
+        Assert.assertTrue(homePage().getProductNameCount() >= 1);
+    }
 }
