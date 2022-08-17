@@ -1,6 +1,6 @@
-# Portafolio-Selenium-Project
+# Web Test Automation
 
-This is a repo for a Selenium + Java project in order to show my skills with test automation.
+This is a personal repository which I'll create a project using Selenium + Java in order to show my skills with test automation.
 
 ## Table of contents
 
@@ -14,6 +14,8 @@ This is a repo for a Selenium + Java project in order to show my skills with tes
 
 This project is about the automation of a web page: http://opencart.abstracta.us/ using Selenium and Java.
 
+![Web Site](/src/images/website.jpeg)
+
 ## Built With
 
 This project is created with:
@@ -21,7 +23,8 @@ This project is created with:
 - Programming Language: Java
 - Maven
 - Selenium
-- Page Object Model
+- POM (Page Object Model)
+- TestNG
 
 ## Getting started
 
