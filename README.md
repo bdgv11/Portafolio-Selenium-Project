@@ -47,9 +47,9 @@ Home Page:
 
 Header Page:
 
-- Verify that check if currency dropdown is displayed and once changed to $ currency , dropdown title is updated with the symbol of the selected currency
-- Verify that check if currency dropdown is displayed and once changed to € currency , dropdown title is updated with the symbol of the selected currency
-- Verify that check if currency dropdown is displayed and once changed to £ currency , dropdown title is updated with the symbol of the selected currency
+- Verify that currency dropdown is displayed and once changed to $ currency , dropdown title is updated with the symbol of the selected currency and symbol of product prices change
+- Verify that currency dropdown is displayed and once changed to € currency , dropdown title is updated with the symbol of the selected currency and symbol of product prices change
+- Verify that currency dropdown is displayed and once changed to £ currency , dropdown title is updated with the symbol of the selected currency and symbol of product prices change
 
 Register Page:
 
